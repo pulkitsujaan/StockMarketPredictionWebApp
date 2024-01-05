@@ -23,6 +23,7 @@ st.write(df.describe())
 st.subheader('Closing Price vs Time chart')
 fig = plt.figure(figsize = (12,6))
 plt.plot(df.Close, label='Closing Price')
+plt.legend()
 st.pyplot(fig)
 
 st.subheader('Closing Price vs Time chart with 100MA')
@@ -30,6 +31,7 @@ ma100 = df.Close.rolling(100).mean()
 fig = plt.figure(figsize = (12,6))
 plt.plot(ma100, label='100 Day Moving Average')
 plt.plot(df.Close, label='Closing Price')
+plt.legend()
 st.pyplot(fig)
 
 st.subheader('Closing Price vs Time chart with 200MA')
@@ -39,6 +41,7 @@ fig = plt.figure(figsize = (12,6))
 plt.plot(ma100, label='100 Day Moving Average')
 plt.plot(ma200, label='200 Day Moving Average')
 plt.plot(df.Close, label='Closing Price')
+plt.legend()
 st.pyplot(fig)
 
 #Splitting data into Training and Testing
