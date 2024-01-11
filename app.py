@@ -17,7 +17,7 @@ user_input = st.text_input('Enter Stock Ticker','AAPL')
 df = yf.download(user_input, start=start, end=end)
 
 #Describing Data
-st.subheader('Data from 2010 - 2023')
+st.subheader('Data from 2010 - 2024')
 st.write(df.describe())
 
 #Visualizations
