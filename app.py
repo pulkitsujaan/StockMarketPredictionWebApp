@@ -6,8 +6,9 @@ import datetime
 from keras.models import load_model
 import streamlit as st
 
+today = datetime.datetime.now()
 start = datetime.datetime(2010, 1, 1)
-end = datetime.datetime(2024, 1, 1)
+end = datetime.datetime(today.year, today.month, today.day)
 
 st.title('Stock Trend Prediction')
 
